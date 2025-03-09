@@ -1,0 +1,22 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .col {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  

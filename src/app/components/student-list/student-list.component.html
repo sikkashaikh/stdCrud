@@ -1,0 +1,11 @@
+<div>
+    <h2>Student List</h2>
+    <ul>
+      <li *ngFor="let student of students$ | async">
+        {{ student.name }} - {{ student.age }} - {{ student.stream.streamname }}
+        <button (click)="onDelete(student.id)">Delete</button>
+        <button (click)="onEdit(student.id)">Edit</button>
+      </li>
+    </ul>
+  </div>
+  

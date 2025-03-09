@@ -1,0 +1,24 @@
+<div *ngIf="student$ | async as student">
+  <h2>Edit Student</h2>
+  <form [formGroup]="studentForm" (ngSubmit)="onSave()">
+    <label>
+      Name:
+      <input formControlName="name" />
+    </label>
+    <br/>
+    <label>
+      Age:
+      <input type="number" formControlName="age" />
+    </label>
+    <br/>
+    <label for="streamid">Stream:</label>
+      <select id="streamid" formControlName="streamid">
+        <option *ngFor="let stream of streams$ | async" [value]="stream.id">
+          {{ stream.name }}
+        </option>
+      </select>
+    <br/>
+
+    <button type="submit">Save</button>
+  </form>
+</div>
